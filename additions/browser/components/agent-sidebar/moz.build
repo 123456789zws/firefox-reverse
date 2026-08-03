@@ -20,6 +20,7 @@ EXTRA_JS_MODULES.agentsidebar += [
     "modules/NotesBackend.sys.mjs",
     "modules/PageBackend.sys.mjs",
     "modules/providers.sys.mjs",
+    "modules/ReasoningEffort.sys.mjs",
     "modules/ScriptsBackend.sys.mjs",
     "modules/SkillBackend.sys.mjs",
     "modules/ToolRouter.sys.mjs",
@@ -27,6 +28,8 @@ EXTRA_JS_MODULES.agentsidebar += [
     "modules/WebApiBackend.sys.mjs",
     "modules/WorkspaceBackend.sys.mjs",
 ]
+
+DIRS += ["preferences"]
 
 JAR_MANIFESTS += ["jar.mn"]
 

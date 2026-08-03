@@ -21,6 +21,7 @@ run npm --prefix "$SIDEBAR_DIR" run build
 
 SELFTESTS=(
   selftest-config.mjs
+  selftest-mozbuild.mjs
   selftest-providers.mjs
   selftest-conversations.mjs
   selftest-stream.mjs
@@ -36,6 +37,8 @@ SELFTESTS=(
 for test_file in "${SELFTESTS[@]}"; do
   run node "$SIDEBAR_DIR/dev/$test_file"
 done
+
+run node "$REPO_ROOT/scripts/check-branding-assets.mjs"
 
 echo
 echo "agent tool selftests: all passed"
